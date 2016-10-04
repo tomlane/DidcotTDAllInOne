@@ -22,7 +22,7 @@
 *.zip
 
 /venv
-
+userconfig.py
 
 # Logs and databases #
 ######################
