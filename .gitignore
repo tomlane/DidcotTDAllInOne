@@ -22,7 +22,7 @@
 *.zip
 
 /venv
-userconfig.py
+
 
 # Logs and databases #
 ######################
@@ -40,4 +40,7 @@ userconfig.py
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+userconfig.py
+
 userconfig.py

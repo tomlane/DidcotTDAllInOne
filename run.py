@@ -26,7 +26,7 @@ mq.subscribe('/topic/TD_WWC_SIG_AREA', 'data', ack='client-individual')
 curses.initscr()
 curses.noecho()
 curses.curs_set(0)
-win = curses.newwin(50, 120, 0, 0)
+win = curses.newwin(50, 180, 0, 0)
 
 
 key = ''
