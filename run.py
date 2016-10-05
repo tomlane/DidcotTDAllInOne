@@ -2,7 +2,7 @@
 from NRListener import Listener
 from MessageFilter import MessageFilter
 from StateModel import StateModel
-from DidcotGui import initGui, drawFixedMap
+from DidcotGui import DidcotGui
 
 from Berth import Berth
 
@@ -31,14 +31,14 @@ curses.noecho()
 curses.curs_set(0)
 win = curses.newwin(40, 180, 0, 0)
 
-
+gui = DidcotGui(win)
 #create all berth objects maybe?
 b1014 = Berth('1014',  10, 10) #<----------test stuff
 b1014.setDesc('9876')
 
 key = ''
 
-drawFixedMap(win)
+gui.drawFixedMap()
     
 while key != 27:   # While Esc key is not pressed
          
@@ -52,12 +52,14 @@ while key != 27:   # While Esc key is not pressed
     sm.newData(filtered_msg)
 
     win.addstr(b1014.ypos, b1014.xpos, b1014.desc) #test test test
-  
+
+    #get messages from state of the railway and send it to Didcotgui
+    #then get didcotgui to update screen
 
     win.addstr(7,1, sm.getTest()) #<-- test dump
 
 
-    drawFixedMap(win) #<- this might come out
+    gui.drawFixedMap() #<- this might come out
 
 
     key = key if event == -1 else event
