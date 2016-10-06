@@ -32,9 +32,7 @@ curses.curs_set(0)
 win = curses.newwin(40, 180, 0, 0)
 
 gui = DidcotGui(win)
-#create all berth objects maybe?
-b1014 = Berth('1014',  10, 10) #<----------test stuff
-b1014.setDesc('9876')
+
 
 key = ''
 
@@ -51,8 +49,7 @@ while key != 27:   # While Esc key is not pressed
     #pass messages and update state of railway
     sm.newData(filtered_msg)
 
-    win.addstr(b1014.ypos, b1014.xpos, b1014.desc) #test test test
-
+    
     #get messages from state of the railway and send it to Didcotgui
     #then get didcotgui to update screen
 

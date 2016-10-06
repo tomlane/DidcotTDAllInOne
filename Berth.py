@@ -12,3 +12,6 @@ class Berth(object): #maybe?
 
 	def clearDesc(self):
 		self.desc = ''
+
+	def hello(self): #<test shit
+		return self.berth

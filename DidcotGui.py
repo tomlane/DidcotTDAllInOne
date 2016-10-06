@@ -1,6 +1,20 @@
-class DidcotGui(object): #maybe???
+from Berth import Berth
+
+class DidcotGui(object):
+
+
     def __init__(self, win):
-      self.win = win
+      b1014 = Berth('1014',  10, 10)
+      b1010 = Berth('1010', 15, 15)
+
+      self.win = win #curses window object
+
+      self.berthList = [b1014, b1010]
+      
+      for item in self.berthList:
+        self.win.addstr(item.ypos, item.xpos, item.hello())
+
+
 
     def drawFixedMap(self):
       self.win.keypad(1)
