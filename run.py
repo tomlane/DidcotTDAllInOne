@@ -29,7 +29,7 @@ mq.subscribe('/topic/TD_WWC_SIG_AREA', 'data', ack='client-individual')
 curses.initscr()
 curses.noecho()
 curses.curs_set(0)
-win = curses.newwin(40, 180, 0, 0)
+win = curses.newwin(40, 100, 0, 0)
 
 gui = DidcotGui(win)
 

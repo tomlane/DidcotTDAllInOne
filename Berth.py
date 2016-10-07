@@ -13,5 +13,5 @@ class Berth(object): #maybe?
 	def clearDesc(self):
 		self.desc = ''
 
-	def hello(self): #<test shit
-		return self.berth
+	def showBerth(self): #<for testing
+		self.desc = self.berth
