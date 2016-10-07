@@ -39,25 +39,24 @@ key = ''
 gui.drawFixedMap()
     
 while key != 27:   # While Esc key is not pressed
-         
+    
+    #get key press from user     
     event = win.getch()
 
     #get unfiltered message from queue
     unfiltered_msg = lst.msg
+
     #filter messages for didcot
     filtered_msg = mf.filter(unfiltered_msg)
+
     #pass messages and update state of railway
     sm.newData(filtered_msg)
 
+    #pass state of railway to gui model and draw berths
+    gui.drawBerths(sm.getState())
     
-    #get messages from state of the railway and send it to Didcotgui
-    #then get didcotgui to update screen
 
-    win.addstr(7,1, sm.getTest()) #<-- test dump
-
-
-    gui.drawFixedMap() #<- this might come out
-
+    
 
     key = key if event == -1 else event
 

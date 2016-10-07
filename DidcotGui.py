@@ -51,11 +51,24 @@ class DidcotGui(object):
       
       self.win = win #curses window object
 
+
+
+    def drawBerths(self, berths):
+
+      berths = berths
+
+      for key in berths.keys(): #for each key in the dict berths thats passed in
+        for BTH in self.berthList: #and for each berth object in the model
+          if key == BTH.berth: #but if the key in the dict matches the model berth
+            BTH.setDesc(berths[key]) #set the new value
+
+
+      # sberths = str(berths) #test
+      # self.win.addstr(5,5, sberths) #display raw dict for testing
+
       for item in self.berthList:
-        item.showBerth()
+        #display all new berths
         self.win.addstr(item.ypos, item.xpos, item.desc)
-
-
 
     def drawFixedMap(self):
 
@@ -64,12 +77,5 @@ class DidcotGui(object):
       self.win.nodelay(1)
 
       self.win.addstr(0, 2, 'Didcot TD')
-
-      # self.win.addstr(33, 1, '-' * 118) #UP Main
-      # self.win.addstr(35, 1, '-' * 118) #DN Main
-      # self.win.addstr(31, 20, '-' * 30) #UP Relief Challow/Wantage
-      # self.win.addstr(37, 20, '-' * 29) #Dn Relief Challow/Wantage
-
-
 
       self.win.timeout(200) 

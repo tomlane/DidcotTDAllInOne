@@ -12,7 +12,6 @@ class StateModel(object):
 		self.state = {} #map is empty on start up 
 
 
-    #########Possible Methods###########
 	def newData(self, filtered_msg):
 		if len(filtered_msg) > 0: #only do if list has values in
 			for item in filtered_msg:
@@ -42,17 +41,18 @@ class StateModel(object):
 		#print "key added-", train, berth
 
 	def delTrain(self, berth):
-		self.state.pop(berth, None)
+		#self.state.pop(berth, None)
+		self.state[berth] = '----'		#<-------Not sure about this
 		#print "key deleted", berth
 
 	def getState(self):
-		#sends the whole "image" of the railway
-		#print self.state
-		print "Berth - Train"
-		for k, v in self.state.iteritems():
-			
-			print k, v
+		#returns the state of the railway dict
+		return self.state
 
-	def getTest(self):
-		teststring = json.dumps(self.state)
-		return teststring		
+	# def getStateTest(self):
+	# 	#sends the whole "image" of the railway
+	# 	#print self.state
+	# 	print "Berth - Train"
+	# 	for k, v in self.state.iteritems():
+			
+	# 		print k, v

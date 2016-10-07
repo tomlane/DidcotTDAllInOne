@@ -5,13 +5,11 @@ class Berth(object):
 		self.ypos = int(ypos)
 		self.xpos = int(xpos)
 		
-		self.desc = '????'
+		self.desc = '----'
 
 	def setDesc(self, desc):
 		self.desc = str(desc)
 
-	def clearDesc(self):
-		self.desc = ''
-
 	def showBerth(self): #<for testing
 		self.desc = self.berth
+

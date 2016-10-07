@@ -11,12 +11,12 @@ class MessageFilter(object):
 
 
 	def filter(self, unfiltered_msg):
+
 		self.msg = unfiltered_msg
 
 		filtered = []
 
 		for item in self.msg:
-
 
 			if "CA_MSG" in item:
 
@@ -33,6 +33,7 @@ class MessageFilter(object):
 					filtered.append(o) # add to filtered list
 
 			elif "CB_MSG" in item:
+
 				if item['CB_MSG']['area_id'] == "D5":
 
 					train = item['CB_MSG']['descr']
@@ -44,6 +45,7 @@ class MessageFilter(object):
 					filtered.append(o)
 
 			elif "CC_MSG" in item:
+
 				if item['CC_MSG']['area_id'] == "D5":
 
 					train = item['CC_MSG']['descr']
@@ -53,8 +55,6 @@ class MessageFilter(object):
 
 					o = IntMsg(train, berth)
 					filtered.append(o)
-
-
 
 		return filtered #returns a filtered list of msg objects
 
