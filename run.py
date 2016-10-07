@@ -43,6 +43,15 @@ while key != 27:   # While Esc key is not pressed
     #get key press from user     
     event = win.getch()
 
+    if key == ord('s'):
+      #if s is pressed display all berth names
+      for item in gui.berthList:
+        item.showBerth()
+    elif key == ord('h'):
+      #if h is pressed hide all berth names
+      for item in gui.berthList:
+          item.hideBerth()
+
     #get unfiltered message from queue
     unfiltered_msg = lst.msg
 
@@ -56,7 +65,7 @@ while key != 27:   # While Esc key is not pressed
     gui.drawBerths(sm.getState())
     
 
-    
+
 
     key = key if event == -1 else event
 

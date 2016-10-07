@@ -10,6 +10,11 @@ class Berth(object):
 	def setDesc(self, desc):
 		self.desc = str(desc)
 
-	def showBerth(self): #<for testing
+
+#This has some weird behaviour for showing berths after a genuine train has passed through it
+	def showBerth(self):
 		self.desc = self.berth
+
+	def hideBerth(self):
+		self.desc = '----'
 
