@@ -1,4 +1,4 @@
-class Berth(object): #maybe?
+class Berth(object):
 
 	def __init__(self, berth, ypos, xpos):
 		self.berth = str(berth)
