@@ -71,21 +71,20 @@ class DidcotGui(object):
       self.b6420 = Berth('6240', 19, 15)
       self.b0922 = Berth('0922', 3, 47)
       self.b2209 = Berth('2209', 5, 20)
-
-      self.b2207 = Berth('2207', 6, 20)
-      # self.b2208
-      # self.b2205
-      # self.b2201
-      # self.b0937
-      # self.b0928
-      # self.b2203
-      # self.b6146
-      # self.b6413
-      # self.b6411
-      # self.b2210
-      # self.b2211
-      # self.b2212
-      # self.b2214
+      self.b2207 = Berth('2207', 6, 22)
+      self.b2208 = Berth('2208', 7, 20)
+      self.b2205 = Berth('2205', 9, 20)
+      self.b2201 = Berth('2201', 13, 21)
+      self.b0937 = Berth('0937', 15, 23)
+      self.b0928 = Berth('0928', 7, 33)
+      self.b2203 = Berth('2203', 9, 35)
+      self.b6416 = Berth('6416', 11, 30)   
+      self.b6413 = Berth('6413', 10, 45)
+      self.b6411 = Berth('6411', 11, 45)
+      self.b2210 = Berth('2210', 3, 13)
+      self.b2211 = Berth('2211', 5, 13)
+      self.b2212 = Berth('2212', 7, 5)
+      self.b2214 = Berth('2214', 3, 4)
 
       self.berthList = [self.b1014, self.b1010, self.b1000, self.b0992, 
       self.b0986, self.b0980, self.b0976, self.b0966, self.b1005, self.b0983, self.b0965,
@@ -97,7 +96,8 @@ class DidcotGui(object):
         self.b0913, self.b0912, self.b0914, self.b0916, self.b0918, self.b0920, self.b0936, 
         self.b0938, self.b0940, self.b0942, self.b0921, self.b0923, self.b0925, self.b0924, 
         self.b0926, self.b0933, self.b0935, self.b0944, self.b6420, self.b0922, self.b2209,
-        self.b2207]
+        self.b2207, self.b2208, self.b2205, self.b2201, self.b0937, self.b0928, self.b2203,
+        self.b6416, self.b6413, self.b6411, self.b2210, self.b2211, self.b2212, self.b2214]
       
       self.win = win #curses window object
 
