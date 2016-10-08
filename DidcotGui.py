@@ -43,20 +43,49 @@ class DidcotGui(object):
       self.b1011 = Berth('1011', 32, 1)
       self.b0901 = Berth('0901', 23, 89)
       self.b0903 = Berth('0903', 19, 89)
-      self.b0832 = Berth('0832', 21, 87)
-      self.b0834 = Berth('0834', 17, 87)
       self.b0906 = Berth('0906', 17, 75)
       self.b0907 = Berth('0907', 19, 77)
       self.b0904 = Berth('0904', 21, 75)
       self.b0905 = Berth('0905', 23, 77)
       self.b0911 = Berth('0911', 23, 63)
       self.b0913 = Berth('0913', 19, 63)
-
       self.b0912 = Berth('0912', 21, 50)
       self.b0914 = Berth('0914', 19, 50)
       self.b0916 = Berth('0916', 17, 50)
       self.b0918 = Berth('0918', 15, 50)
       self.b0920 = Berth('0920', 13, 50)
+      self.b0931 = Berth('0931', 23, 30)
+      self.b0941 = Berth('0941', 23, 13)
+      self.b0936 = Berth('0936', 23, 7)
+      self.b0938 = Berth('0938', 21, 7)
+      self.b0940 = Berth('0940', 19, 7)
+      self.b0942 = Berth('0942', 17, 7)
+      self.b0921 = Berth('0921', 19, 45)
+      self.b0923 = Berth('0923', 17, 45)
+      self.b0925 = Berth('0925', 15, 45)
+      self.b0924 = Berth('0924', 19, 33)
+      self.b0926 = Berth('0926', 17, 33)
+      self.b0933 = Berth('0933', 19, 27)
+      self.b0935 = Berth('0935', 17, 27)
+      self.b0944 = Berth('0944', 17, 15)
+      self.b6420 = Berth('6240', 19, 15)
+      self.b0922 = Berth('0922', 3, 47)
+      self.b2209 = Berth('2209', 5, 20)
+
+      self.b2207 = Berth('2207', 6, 20)
+      # self.b2208
+      # self.b2205
+      # self.b2201
+      # self.b0937
+      # self.b0928
+      # self.b2203
+      # self.b6146
+      # self.b6413
+      # self.b6411
+      # self.b2210
+      # self.b2211
+      # self.b2212
+      # self.b2214
 
       self.berthList = [self.b1014, self.b1010, self.b1000, self.b0992, 
       self.b0986, self.b0980, self.b0976, self.b0966, self.b1005, self.b0983, self.b0965,
@@ -64,8 +93,11 @@ class DidcotGui(object):
         self.b0977, self.b0981, self.b0984, self.b0989, self.b0993, self.b0999, self.b1003, 
         self.b1007, self.b0951, self.b0954, self.b0961, self.b0987, self.b0991, self.b0997,
         self.b1001, self.b1002, self.b0994, self.b0988, self.b1011, self.b0901, self.b0903, 
-        self.b0832, self.b0834, self.b0906, self.b0907, self.b0904, self.b0905, self.b0911,
-        self.b0913, self.b0912, self.b0914, self.b0916, self.b0918, self.b0920]
+        self.b0906, self.b0907, self.b0904, self.b0905, self.b0911, self.b0931 , self.b0941,
+        self.b0913, self.b0912, self.b0914, self.b0916, self.b0918, self.b0920, self.b0936, 
+        self.b0938, self.b0940, self.b0942, self.b0921, self.b0923, self.b0925, self.b0924, 
+        self.b0926, self.b0933, self.b0935, self.b0944, self.b6420, self.b0922, self.b2209,
+        self.b2207]
       
       self.win = win #curses window object
 
