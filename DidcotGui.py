@@ -1,5 +1,7 @@
 from Berth import Berth
 
+tile = '-'
+
 class DidcotGui(object):
 
 
@@ -127,5 +129,18 @@ class DidcotGui(object):
       self.win.nodelay(1)
 
       self.win.addstr(0, 2, 'Didcot TD')
+
+      self.win.addstr(30, 1, tile * 98) #Up Main
+      self.win.addstr(21, 1, tile * 98) #Up Main
+      self.win.addstr(32, 1, tile * 98) #Dn Main
+      self.win.addstr(23, 1, tile * 98) #Dn Main
+      self.win.addstr(19, 1, tile * 98) #Dn Relief
+      self.win.addstr(17, 27, tile * 72) #Up Relief
+      self.win.addstr(34, 15, tile * 30) #Dn Relief Wantage
+      self.win.addstr(28, 15, tile * 30) #Up Relief Wantage
+      self.win.addstr(34, 74, tile * 13) #Dn Milton Loop
+      self.win.addstr(28, 74, tile * 25) #Up Milton Loop
+      self.win.addstr(3, 1, tile * 53) #Up Oxford / Avoider
+      self.win.addstr(5, 1, tile * 53) #Dn Oxford / Avoider
 
       self.win.timeout(200) 

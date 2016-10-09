@@ -42,7 +42,7 @@ class StateModel(object):
 
 	def delTrain(self, berth):
 		#self.state.pop(berth, None)
-		self.state[berth] = '----'		#<-------Not sure about this
+		self.state[berth] = 'XXXX'		#<-------Not sure about this
 		#print "key deleted", berth
 
 	def getState(self):

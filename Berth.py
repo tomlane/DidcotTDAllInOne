@@ -5,7 +5,7 @@ class Berth(object):
 		self.ypos = int(ypos)
 		self.xpos = int(xpos)
 		
-		self.desc = '----'
+		self.desc = 'XXXX'
 
 	def setDesc(self, desc):
 		self.desc = str(desc)
@@ -14,5 +14,5 @@ class Berth(object):
 		self.desc = self.berth
 
 	def hideBerth(self):
-		self.desc = '----'
+		self.desc = 'XXXX'
 
