@@ -20,9 +20,7 @@ class StateModel(object):
 					if item.berth in self.state: #if berth key exists in dict delete key
 						self.delTrain(item.berth)
 
-
-					if item.destination not in self.state: #if new berth does not exist in dict add it
-						self.addTrain(item.destination, item.train)
+					self.addTrain(item.destination, item.train)
 
 
 				elif item.msgtype == "CAN":
@@ -41,8 +39,7 @@ class StateModel(object):
 		#print "key added-", train, berth
 
 	def delTrain(self, berth):
-		#self.state.pop(berth, None)
-		self.state[berth] = 'XXXX'		#<-------Not sure about this
+		self.state[berth] = 'XXXX'
 		#print "key deleted", berth
 
 	def getState(self):
