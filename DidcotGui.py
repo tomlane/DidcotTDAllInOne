@@ -77,8 +77,8 @@ class DidcotGui(object):
       self.b2201 = Berth('2201', 13, 21)
       self.b0937 = Berth('0937', 15, 23)
       self.b0928 = Berth('0928', 7, 33)
-      self.b2203 = Berth('2203', 9, 35)
-      self.b6416 = Berth('6416', 11, 30)   
+      self.b2203 = Berth('2203', 9, 33)
+      self.b6416 = Berth('6416', 13, 32)   
       self.b6413 = Berth('6413', 10, 45)
       self.b6411 = Berth('6411', 11, 45)
       self.b2210 = Berth('2210', 3, 13)
@@ -106,17 +106,11 @@ class DidcotGui(object):
     def drawBerths(self, berths):
 
 
-
-      berths = berths
-
       for key in berths.keys(): #for each key in the dict berths thats passed in
         for BTH in self.berthList: #and for each berth object in the model
           if key == BTH.berth: #but if the key in the dict matches the model berth
             BTH.setDesc(berths[key]) #set the new value
 
-
-      # sberths = str(berths) #test
-      # self.win.addstr(5,5, sberths) #display raw dict for testing
 
       for item in self.berthList:
         #display all new berths
@@ -147,11 +141,13 @@ class DidcotGui(object):
       self.win.addstr(28, 15, tile * 30) #Up Relief Wantage
       self.win.addstr(34, 74, tile * 13) #Dn Milton Loop
       self.win.addstr(28, 74, tile * 25) #Up Milton Loop
-      self.win.addstr(3, 1, tile * 53) #Up Oxford / Avoider
-      self.win.addstr(5, 1, tile * 53) #Dn Oxford / Avoider
-      self.win.addstr(7, 20, tile * 20) #Up Chester
+      self.win.addstr(3, 1, tile * 61) #Up Oxford / Avoider
+      self.win.addstr(5, 1, tile * 57) #Dn Oxford / Avoider
+      self.win.addstr(7, 20, tile * 21) #Up Chester
       self.win.addstr(9, 20, tile * 20) #Dn Chester
       self.win.addstr(15, 42, tile * 14) #P5
+      self.win.addstr(13, 49, tile * 6) #Didcot Yard East Entrance
+      
 
       #points
 
@@ -159,6 +155,8 @@ class DidcotGui(object):
       self.win.addstr(29, 45, point2) #UR/UM Wantage
       self.win.addstr(33, 14, point2) #DR/DM Challow
       self.win.addstr(33, 45, point1) #DM/DR Wantage
+      self.win.addstr(31, 44, point1) #Reversible Wantage
+      self.win.addstr(31, 45, point2) #Reversible Wantage
       self.win.addstr(29, 73, point1) #UM/UR Milton
       self.win.addstr(33, 73, point2) #DG/DM Milton
       self.win.addstr(33, 87, point1) #DM/DG Milton
@@ -181,6 +179,22 @@ class DidcotGui(object):
       self.win.addstr(16, 58, point2) #DO/DR Didcot East
       self.win.addstr(16, 62, point2) #UO/UR Didcot East
       self.win.addstr(16, 56, point2) #P5/UR
-      self.win.addstr(18, 39, point1) #UR/P4 Station
+      self.win.addstr(18, 38, point1) #UR/P4 Station
+      self.win.addstr(14, 55, point2) #Didcot Yard East Entrance
+
+      self.win.addstr(18, 42, point2) #P3/Down Chester
+      self.win.addstr(16, 38, point2) #P4/Down Chester
+      self.win.addstr(16, 42, point2) #P4/Up Chester
+
+      #vertical
+
+      self.win.addstr(4, 62, vertical) #up avoider
+      self.win.addstr(5, 62, vertical) #up avoider
+
+      for i in range(6,16):
+        self.win.addstr(i, 58, vertical) #down avoider
+        self.win.addstr(i, 62, vertical) #up avoider
+
+      
 
       self.win.timeout(200) 
