@@ -75,10 +75,10 @@ class DidcotGui(object):
       self.b2208 = Berth('2208', 7, 22)
       self.b2205 = Berth('2205', 9, 22)
       self.b2201 = Berth('2201', 13, 21)
-      self.b0937 = Berth('0937', 15, 23)
-      self.b0928 = Berth('0928', 7, 33)
-      self.b2203 = Berth('2203', 9, 33)
-      self.b6416 = Berth('6416', 13, 32)   
+      self.b0937 = Berth('0937', 15, 25)
+      self.b0928 = Berth('0928', 7, 31)
+      self.b2203 = Berth('2203', 9, 31)
+      self.b6416 = Berth('6416', 11, 32)   
       self.b6413 = Berth('6413', 10, 45)
       self.b6411 = Berth('6411', 11, 45)
       self.b2210 = Berth('2210', 3, 13)
@@ -144,7 +144,7 @@ class DidcotGui(object):
       self.win.addstr(3, 1, tile * 61) #Up Oxford / Avoider
       self.win.addstr(5, 1, tile * 57) #Dn Oxford / Avoider
       self.win.addstr(7, 20, tile * 21) #Up Chester
-      self.win.addstr(9, 20, tile * 20) #Dn Chester
+      self.win.addstr(9, 20, tile * 18) #Dn Chester
       self.win.addstr(15, 42, tile * 14) #P5
       self.win.addstr(13, 49, tile * 6) #Didcot Yard East Entrance
       
@@ -181,20 +181,31 @@ class DidcotGui(object):
       self.win.addstr(16, 56, point2) #P5/UR
       self.win.addstr(18, 38, point1) #UR/P4 Station
       self.win.addstr(14, 55, point2) #Didcot Yard East Entrance
-
       self.win.addstr(18, 42, point2) #P3/Down Chester
       self.win.addstr(16, 38, point2) #P4/Down Chester
       self.win.addstr(16, 42, point2) #P4/Up Chester
+      self.win.addstr(15, 29, point1) #down west curve
 
       #vertical
 
       self.win.addstr(4, 62, vertical) #up avoider
       self.win.addstr(5, 62, vertical) #up avoider
+      self.win.addstr(15, 38, vertical) #up chester
+      self.win.addstr(15, 41, vertical) #down chester
+      self.win.addstr(8, 41, vertical) #down chester
+      self.win.addstr(9, 41, vertical) #down chester
+
+      for i in range(10,15):
+        self.win.addstr(i, 29, vertical)
+
 
       for i in range(6,16):
         self.win.addstr(i, 58, vertical) #down avoider
         self.win.addstr(i, 62, vertical) #up avoider
 
+      for i in range(10,15):
+        self.win.addstr(i, 38, vertical) #down chester
+        self.win.addstr(i, 41, vertical) #up chester
       
 
       self.win.timeout(200) 
