@@ -72,19 +72,19 @@ class DidcotGui(object):
       self.b0922 = Berth('0922', 3, 47)
       self.b2209 = Berth('2209', 5, 22)
       self.b2207 = Berth('2207', 6, 22)
-      self.b2208 = Berth('2208', 7, 22)
-      self.b2205 = Berth('2205', 9, 22)
-      self.b2201 = Berth('2201', 13, 21)
+      self.b2208 = Berth('2208', 7, 21)
+      self.b2205 = Berth('2205', 9, 21)
+      self.b2201 = Berth('2201', 13, 22)
       self.b0937 = Berth('0937', 15, 25)
       self.b0928 = Berth('0928', 7, 31)
       self.b2203 = Berth('2203', 9, 31)
       self.b6416 = Berth('6416', 11, 32)   
       self.b6413 = Berth('6413', 10, 45)
       self.b6411 = Berth('6411', 11, 45)
-      self.b2210 = Berth('2210', 3, 13)
-      self.b2211 = Berth('2211', 5, 13)
+      self.b2210 = Berth('2210', 3, 11)
+      self.b2211 = Berth('2211', 5, 11)
       self.b2212 = Berth('2212', 7, 5)
-      self.b2214 = Berth('2214', 3, 4)
+      self.b2214 = Berth('2214', 3, 2)
 
       self.berthList = [self.b1014, self.b1010, self.b1000, self.b0992, 
       self.b0986, self.b0980, self.b0976, self.b0966, self.b1005, self.b0983, self.b0965,
@@ -185,6 +185,11 @@ class DidcotGui(object):
       self.win.addstr(16, 38, point2) #P4/Down Chester
       self.win.addstr(16, 42, point2) #P4/Up Chester
       self.win.addstr(15, 29, point1) #down west curve
+      self.win.addstr(8, 28 , point2) #down west curve
+
+      self.win.addstr(10, 26 , point2) #up west curve
+
+
 
       #vertical
 
@@ -195,8 +200,9 @@ class DidcotGui(object):
       self.win.addstr(8, 41, vertical) #down chester
       self.win.addstr(9, 41, vertical) #down chester
 
+
       for i in range(10,15):
-        self.win.addstr(i, 29, vertical)
+        self.win.addstr(i, 29, vertical) #down west loop
 
 
       for i in range(6,16):
