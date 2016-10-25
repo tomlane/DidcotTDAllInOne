@@ -74,16 +74,16 @@ class DidcotGui(object):
       self.b2207 = Berth('2207', 6, 22)
       self.b2208 = Berth('2208', 7, 21)
       self.b2205 = Berth('2205', 9, 21)
-      self.b2201 = Berth('2201', 13, 22)
+      self.b2201 = Berth('2201', 12, 24)
       self.b0937 = Berth('0937', 15, 25)
       self.b0928 = Berth('0928', 7, 31)
       self.b2203 = Berth('2203', 9, 31)
       self.b6416 = Berth('6416', 11, 32)   
       self.b6413 = Berth('6413', 10, 45)
       self.b6411 = Berth('6411', 11, 45)
-      self.b2210 = Berth('2210', 3, 11)
-      self.b2211 = Berth('2211', 5, 11)
-      self.b2212 = Berth('2212', 7, 5)
+      self.b2210 = Berth('2210', 3, 9)
+      self.b2211 = Berth('2211', 5, 9)
+      self.b2212 = Berth('2212', 7, 2)
       self.b2214 = Berth('2214', 3, 2)
 
       self.berthList = [self.b1014, self.b1010, self.b1000, self.b0992, 
@@ -143,8 +143,8 @@ class DidcotGui(object):
       self.win.addstr(28, 74, tile * 25) #Up Milton Loop
       self.win.addstr(3, 1, tile * 61) #Up Oxford / Avoider
       self.win.addstr(5, 1, tile * 57) #Dn Oxford / Avoider
-      self.win.addstr(7, 20, tile * 21) #Up Chester
-      self.win.addstr(9, 20, tile * 18) #Dn Chester
+      self.win.addstr(7, 19, tile * 22) #Up Chester
+      self.win.addstr(9, 18, tile * 20) #Dn Chester
       self.win.addstr(15, 42, tile * 14) #P5
       self.win.addstr(13, 49, tile * 6) #Didcot Yard East Entrance
       
@@ -185,10 +185,18 @@ class DidcotGui(object):
       self.win.addstr(16, 38, point2) #P4/Down Chester
       self.win.addstr(16, 42, point2) #P4/Up Chester
       self.win.addstr(15, 29, point1) #down west curve
-      self.win.addstr(8, 28 , point2) #down west curve
-
-      self.win.addstr(10, 26 , point2) #up west curve
-
+      self.win.addstr(8, 28, point2) #down west curve
+      self.win.addstr(10, 26, point2) #up west curve
+      self.win.addstr(16, 24, point1) #down west curve foxhall
+      self.win.addstr(16, 21, point1) #up west curve
+      self.win.addstr(15, 22, point1) #up west curve
+      self.win.addstr(14, 23, point1) #up west curve
+      self.win.addstr(13, 25, point1) #up west curve
+      self.win.addstr(4, 15, point2) #Didcot North UO/DO
+      self.win.addstr(6, 15, point2) #Didcot North
+      self.win.addstr(6, 18, point2) #Didcot North
+      self.win.addstr(7, 16, point2) #Dn Chester Didcot North
+      self.win.addstr(8, 17, point2) #Dn Chester Didcot North
 
 
       #vertical
@@ -199,11 +207,10 @@ class DidcotGui(object):
       self.win.addstr(15, 41, vertical) #down chester
       self.win.addstr(8, 41, vertical) #down chester
       self.win.addstr(9, 41, vertical) #down chester
-
+      self.win.addstr(11, 26, vertical) #up west curve
 
       for i in range(10,15):
         self.win.addstr(i, 29, vertical) #down west loop
-
 
       for i in range(6,16):
         self.win.addstr(i, 58, vertical) #down avoider
