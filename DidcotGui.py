@@ -198,6 +198,9 @@ class DidcotGui(object):
       self.win.addstr(7, 16, point2) #Dn Chester Didcot North
       self.win.addstr(8, 17, point2) #Dn Chester Didcot North
 
+      self.win.addstr(4, 8, point1) #Appleford
+      self.win.addstr(6, 6, point1) #Appleford
+
 
       #vertical
 
