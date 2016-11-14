@@ -79,7 +79,7 @@ class DidcotGui(object):
       self.b0928 = Berth('0928', 7, 31)
       self.b2203 = Berth('2203', 9, 31)
       self.b6416 = Berth('6416', 11, 32)   
-      self.b6413 = Berth('6413', 10, 45)
+      self.b6413 = Berth('6413', 9, 45)
       self.b6411 = Berth('6411', 11, 45)
       self.b2210 = Berth('2210', 3, 9)
       self.b2211 = Berth('2211', 5, 9)
@@ -147,7 +147,8 @@ class DidcotGui(object):
       self.win.addstr(9, 18, tile * 20) #Dn Chester
       self.win.addstr(15, 42, tile * 14) #P5
       self.win.addstr(13, 49, tile * 6) #Didcot Yard East Entrance
-      
+      self.win.addstr(11, 36, tile * 10) #Fuel Point to Didcot Yard
+      self.win.addstr(6, 19, tile * 8) #Didcot Yard West Entrance
 
       #points
 
@@ -197,10 +198,10 @@ class DidcotGui(object):
       self.win.addstr(6, 18, point2) #Didcot North
       self.win.addstr(7, 16, point2) #Dn Chester Didcot North
       self.win.addstr(8, 17, point2) #Dn Chester Didcot North
-
       self.win.addstr(4, 8, point1) #Appleford
       self.win.addstr(6, 6, point1) #Appleford
 
+      self.win.addstr(10, 44, point1) #Appleford
 
       #vertical
 
